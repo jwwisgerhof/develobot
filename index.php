@@ -3,10 +3,8 @@ require 'vendor/autoload.php';
 
 $token = "ov1s50h4wQ1HBn4CHhqn83dM";
 
-$string = http_build_query($_REQUEST);
-
 $response = [
-    "text" => $string
+    "text" => $_SERVER['QUERY_STRING']
 ];
 
 echo json_encode($response);
