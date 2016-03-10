@@ -3,10 +3,21 @@ require '../vendor/autoload.php';
 
 $token = "ov1s50h4wQ1HBn4CHhqn83dM";
 
-$response = [
-    "text" => file_get_contents("php://input")
-];
+$request = $_POST;
 
-//echo json_encode($response);
+$text = "";
+if ($request["trigger_word"] === "!request") {
+    $text = http_build_query($_POST);
+} else if ($request["trigger_word"] === "!stats") {
+    $text = "Some great statistics!";
+}
+
+if ($text !== "") {
+    $return = [
+        "text" => $text
+    ];
+
+    echo json_encode($return);
+}
 
 ?>
