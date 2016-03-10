@@ -7,6 +7,6 @@ $response = [
     "text" => file_get_contents("php://input")
 ];
 
-echo json_encode($response);
+//echo json_encode($response);
 
 ?>
