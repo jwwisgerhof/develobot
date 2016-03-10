@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $token = "ov1s50h4wQ1HBn4CHhqn83dM";
 
