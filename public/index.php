@@ -16,8 +16,6 @@ if ($text !== "") {
     $return = [
         "text" => $text
     ];
-
     echo json_encode($return);
 }
-
 ?>
